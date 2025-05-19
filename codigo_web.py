@@ -279,7 +279,7 @@ if 'history' not in st.session_state:
 # Interfaz principal
 query = st.text_input(
     "Escribe tu pregunta sobre un medicamento:",
-    placeholder="Ej: ¿Qué contraindicaciones tiene el paracetamol?",
+    placeholder="Ej: ¿Qué contraindicaciones tiene el medicamento EXJADE?",
     key="query_input"
 )
 
