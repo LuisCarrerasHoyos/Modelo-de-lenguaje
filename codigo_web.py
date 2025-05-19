@@ -209,6 +209,7 @@ def responder_consulta_return(query, vectordb, documentos, k=3):
     4. Cita solo los medicamentos con información relevante.
     5. Resume la información, no la copies.
     6. No me digas en que sección se encuentra la información, solo dame la respuesta.
+    7. Usa un lenguaje fácil de entender, como si hablaras con alguien que no es médico.
     {query}
     """
     response = llm.invoke(prompt)
@@ -230,6 +231,7 @@ def validar_respuesta(state: GraphState) -> GraphState:
     2. Precisa y directa
     3. Concisa
     4. No copia literal
+    5. Usa un lenguaje fácil de entender, como si hablaras con alguien que no es médico.
     
     Info: {medicamentos_text}
     Pregunta: {query}
@@ -247,6 +249,7 @@ def validar_respuesta(state: GraphState) -> GraphState:
     1. Coherente
     2. Precisa
     3. Resumen claro
+    4. Usa un lenguaje fácil de entender, como si hablaras con alguien que no es médico.
     
     Info: {medicamentos_text}
     Pregunta: {query}
