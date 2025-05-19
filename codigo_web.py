@@ -202,11 +202,13 @@ def responder_consulta_return(query, vectordb, documentos, k=3):
     prompt = f"""
     Responde usando ÚNICAMENTE esta información:
     {medicamentos_text}
-    Instrucciones:
+    Instrucciones importantes:
     1. Sé preciso y conciso.
     2. Si no hay información relevante, indica que no dispones de esos datos.
     3. Nunca inventes información.
-    4. Responde directamente a:
+    4. Cita solo los medicamentos con información relevante.
+    5. Resume la información, no la copies.
+    6. No me digas en que sección se encuentra la información, solo dame la respuesta.
     {query}
     """
     response = llm.invoke(prompt)
